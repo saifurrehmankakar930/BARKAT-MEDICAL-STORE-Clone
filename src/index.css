@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom Brand Theme Colors */
+  --color-brand-primary: #0f766e; /* Deep Teal - Clean Healthcare feel */
+  --color-brand-secondary: #0d9488; /* Emerald Teal */
+  --color-brand-accent: #f59e0b; /* Amber Alert */
+  --color-brand-dark: #111827; /* Near Black */
+  --color-brand-light: #f9fafb; /* Soft Off-White */
+}
+
+/* Glassmorphism/Frosted Glass theme helper classes */
+.glass-panel {
+  background-color: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.glass-navbar {
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-sidebar {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background-color: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom styles for receipt printing */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-receipt-container, .print-receipt-container * {
+    visibility: visible;
+  }
+  .print-receipt-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80mm; /* standard thermal */
+    padding: 2mm;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #000;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(15, 118, 110, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 118, 110, 0.4);
+}

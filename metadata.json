@@ -1,0 +1,6 @@
+{
+  "name": "Barakat Medical Store",
+  "description": "Premium Pharmacy Management Software for Barakat Medical Store in Quetta, Balochistan. Complete offline POS, lightning-fast inventory, purchase tracking, customer ledgers, and comprehensive financial reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
